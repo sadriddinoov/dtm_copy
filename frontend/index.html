@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="login">
+        <h2 class="login_header">
+            Royhatdan otish
+        </h2>
+
+        <form id="login_form"> 
+            <input id="fullName" class="login_input" type="text" placeholder="Full name">
+
+            <hr>
+            
+            <input id="Email" class="login_input" type="text" placeholder="Email or phone">
+
+            <hr>
+            
+            <input id="Username" class="login_input" type="text" placeholder="Username">
+
+            <hr>
+            
+            <select class="login_select" id="login_select">
+                <option class="login_option" hidden selected>Viloyat</option>
+                <option class="login_option" value="Andijon">Andijon</option>
+                <option class="login_option" value="Buxoro">Buxoro</option>
+                <option class="login_option" value="Farg''ona">Farg'ona</option>
+                <option class="login_option" value="Jizzax">Jizzax</option>
+                <option class="login_option" value="Xorazm">Xorazm</option>
+                <option class="login_option" value="Namangan">Namangan</option>
+                <option class="login_option" value="Navoiy">Navoiy</option>
+                <option class="login_option" value="Qashqadaryo">Qashqadaryo</option>
+                <option class="login_option" value="Qoraqalpog''iston Respublikasi">Qoraqalpog'iston Respublikasi</option>
+                <option class="login_option" value="Samarqand">Samarqand</option>
+                <option class="login_option" value="Sirdaryo">Sirdaryo</option>
+                <option class="login_option" value="Surxondaryo">Surxondaryo</option>
+                <option class="login_option" value="Toshkent viloyati">Toshkent viloyati</option>
+                <option class="login_option" value="Toshkent">Toshkent</option>
+            </select>
+
+            <hr>
+
+            <input id="password" class="login_input" type="password" placeholder="Password">
+
+            <hr>
+
+            <div style="display: flex; gap: 10px;">
+               <div style="display: flex; gap: 10px;">
+                <input value="Erkak" id="gender" type="radio" name="gender">
+                <h4 class="input_heading">
+                    Erkak
+                </h3>
+               </div>
+                <div style="display: flex; gap: 10px;">
+                    <input value="Ayol" id="gender" type="radio" name="gender">
+                    <h4 class="input_heading">
+                        Ayol
+                    </h3>
+                </div>
+            </div>
+
+            <button class="login_btn" style="display: block;" type="submit">Royhatdan otish</button>
+
+            <a class="login_link" href="">Hisobingiz bormi? Kirish</a>
+        </form>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
