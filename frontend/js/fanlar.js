@@ -1,4 +1,3 @@
-
 let userId = localStorage.getItem('userId');
 let firsFan = document.querySelector("#main_1_select");
 let seconFan = document.querySelector("#main_2_select");
@@ -10,7 +9,7 @@ if (userId) {
         let firsFanValue = firsFan.value;
         let seconFanValue = seconFan.value;
     
-        if (firsFanValue == "Matematika" &&   seconFanValue == "Ingliz tili") {
+        if (firsFanValue == "Matematika" &&  seconFanValue == "Ingliz tili") {
             const updatedUser = await fetch("http://localhost:5000/fanlar", 
         {
             method: "PUT",
@@ -22,7 +21,11 @@ if (userId) {
     
         let { status } = await updatedUser.json();
         if (status == 201) {
+            localStorage.setItem('firstfan', [firsFanValue])
+            localStorage.setItem('secondfan', [seconFanValue])
             window.location = "/yonalish.html"
+        } else {
+            alert("wrong body")
         }
         }
     
@@ -38,7 +41,11 @@ if (userId) {
     
         let { status } = await updatedUser.json();
         if (status == 201) {
+            localStorage.setItem('firstfan', [firsFanValue])
+            localStorage.setItem('secondfan', [seconFanValue])
             window.location = "/yonalish.html"
+        } else {
+            alert("wrong body")
         }
     
         }
@@ -55,15 +62,19 @@ if (userId) {
     
         let { status } = await updatedUser.json();
         if (status == 201) {
+            localStorage.setItem('firstfan', [firsFanValue])
+            localStorage.setItem('secondfan', [seconFanValue])
             window.location = "/yonalish.html"
         } else {
             alert("wrong body")
         }
     
         } 
-    
+
     })
 } else {
     alert('go to register')
     window.location = '/index.html'
 }
+
+ 

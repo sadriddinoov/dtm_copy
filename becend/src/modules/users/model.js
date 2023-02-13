@@ -8,7 +8,21 @@ const POST = async ({ fullName, emailOrPhone, username, viloyat, password, gende
     }
 }
 
+const PUT = async ({ userId, bal }) => {
+    try {
+        return await fetch(`
+        update users
+          set
+             bal = $1
+          where user_id = $2
+        returning *`, [bal, userId])
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 
 export default {
-    POST
+    POST,
+    PUT
 }
