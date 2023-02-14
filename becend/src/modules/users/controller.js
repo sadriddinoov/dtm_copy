@@ -15,7 +15,6 @@ const POST = async (req, res) => {
 
 const PUT = async (req, res) => {
   try {
-    console.log(req.params);
    let updatedUser = await model.PUT(req.params);
    if (updatedUser.length) {
     res.status(200).json({status: 200, message: 'succes'})
@@ -27,7 +26,17 @@ const PUT = async (req, res) => {
   }
 }
 
+const GET = async (req, res) => {
+  try {
+   let users = await model.GET();
+   res.status(200).json({status: 200, message: 'succes', users})
+  } catch (error) {
+    res.status(400).json({status: 400, message: error.message})
+  }
+}
+
 export default {
     POST,
-    PUT
+    PUT,
+    GET
 }

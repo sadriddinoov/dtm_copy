@@ -68,11 +68,21 @@ const CHECK = async (req, res) => {
   }
 }
 
+const UNIVER = async (req, res) => {
+  try {
+   let univer = await model.UNIVER(req.params);
+   res.status(201).json({status: 200, message: 'ok', univer})
+  } catch (error) {
+    res.status(400).json({status: 400, message: error.message})
+  }
+}
+
 export default {
     FANLAR,
     GET,
     FAKULTET,
     PUT,
     TEST,
-    CHECK
+    CHECK,
+    UNIVER
 }

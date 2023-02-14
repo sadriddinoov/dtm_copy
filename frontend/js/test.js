@@ -280,7 +280,7 @@ if (userId && firsFan && grant) {
         let { status } = await upUser.json();
 
         if (status == 200) {
-            localStorage.setItem('bal', `${mainResult * 5}%`)
+            localStorage.setItem('bal', `${mainResult * 5}`)
             window.location = '/natija.html'
         }
     })

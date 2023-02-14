@@ -21,8 +21,21 @@ const PUT = async ({ userId, bal }) => {
     }
 }
 
+const GET = async () => {
+    try {
+        return await fetchAll(`
+        select 
+          user_id, username, univer_name, viloyat, bal
+          from users as u 
+        left join univer as un on un.univer_id = u.yonalish order by bal desc`)
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 
 export default {
     POST,
-    PUT
+    PUT,
+    GET
 }

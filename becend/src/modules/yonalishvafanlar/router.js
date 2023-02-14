@@ -9,5 +9,6 @@ router.get('/fakultet/:univerId', controller.FAKULTET)
 router.put('/users', controller.PUT)
 router.get('/tests/:fan', controller.TEST)
 router.get('/tests/:testid/:testAnswer', controller.CHECK)
+router.get('/univers/:univerId', controller.UNIVER)
 
 export default router

@@ -69,11 +69,22 @@ const CHECK = async ({testid, testAnswer}) => {
     }
 }
 
+const UNIVER = async ({univerId}) => {
+    try {
+        return await fetchAll(`
+        select univer_name from univer where univer_id = $1
+        `, [univerId])
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
 export default {
     FANLAR,
     GET,
     FAKULTET,
     PUT,
     TEST,
-    CHECK
+    CHECK,
+    UNIVER
 }

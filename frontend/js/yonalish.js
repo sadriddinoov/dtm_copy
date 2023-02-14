@@ -31,6 +31,7 @@ if (userId && firsFan && secondFan) {
     
     univerSelect.addEventListener('change' ,  async(a) => {   
         const fakultets = await fetch(`http://localhost:5000/fakultet/${a.target.value}`)
+        localStorage.setItem('univerId', a.target.value)
         let { fakultet } = await fakultets.json();
         for (let element in fakultet) {
             const el = fakultet[element];
